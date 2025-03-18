@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tackling Food Waste for Zero Hunger</title>
   <link rel="stylesheet" href="style.css">
+  <!-- Include Google Maps API -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY&callback=initMap" async defer></script>
 </head>
 <body>
   <header>
@@ -36,65 +38,18 @@
     </div>
   </section>
 
-  <!-- New Section: Community Sharing/Bartering -->
+  <!-- New Section: Food Rescue Map -->
+  <section id="food-rescue-map">
+    <h2>Food Rescue Map</h2>
+    <p>Find local food rescue organizations, food banks, and other resources that help combat food waste.</p>
+    <div id="map" style="height: 400px; width: 100%;"></div>
+  </section>
+
   <section id="community-sharing">
     <h2>Community Sharing/Bartering</h2>
     <p>Exchange surplus food with your local community to reduce waste and help those in need.</p>
     <button onclick="alert('Share or trade your surplus food with others in your community!')">Share Food</button>
     <p>Join a local bartering network and contribute to sustainable food practices.</p>
-  </section>
-
-  <!-- New Section: Gamification and Rewards -->
-  <section id="gamification">
-    <h2>Gamification and Rewards</h2>
-    <p>Track your progress in reducing food waste and earn rewards for your efforts!</p>
-    <button onclick="alert('You have earned 10 points for logging food waste! Keep going!')">Log Your First Food Waste</button>
-    <div id="rewards">
-      <h3>Your Points:</h3>
-      <p id="points">0</p>
-      <button onclick="addPoints()">Earn 5 Points</button>
-    </div>
-  </section>
-
-  <!-- New Section: Food Image Recognition -->
-  <section id="food-image-recognition">
-    <h2>Food Image Recognition</h2>
-    <p>Upload a picture of food and let us help you identify it for potential waste reduction!</p>
-    <input type="file" id="food-image" accept="image/*">
-    <button onclick="recognizeFood()">Recognize Food</button>
-    <div id="food-recognition-result">
-      <h3>Recognized Food:</h3>
-      <p id="food-name-recognition">No food recognized yet</p>
-    </div>
-  </section>
-
-  <!-- New Section: Educational Videos -->
-  <section id="educational-videos">
-    <h2>Educational Videos</h2>
-    <p>Watch these videos to learn more about food waste and how we can make a difference!</p>
-    
-    <div class="video-container">
-      <div class="video">
-        <a href="https://youtu.be/ifCQ4LqT8G8" target="_blank">
-          <img src="https://img.youtube.com/vi/ifCQ4LqT8G8/0.jpg" alt="Food Waste Awareness Video" class="video-thumbnail">
-          <p>Food Waste Awareness</p>
-        </a>
-      </div>
-
-      <div class="video">
-        <a href="https://youtu.be/ishA6kry8nc" target="_blank">
-          <img src="https://img.youtube.com/vi/ishA6kry8nc/0.jpg" alt="Sustainable Food Practices" class="video-thumbnail">
-          <p>Sustainable Food Practices</p>
-        </a>
-      </div>
-
-      <div class="video">
-        <a href="https://youtu.be/TVP3j7_W7og" target="_blank">
-          <img src="https://img.youtube.com/vi/TVP3j7_W7og/0.jpg" alt="Reducing Food Waste in the Community" class="video-thumbnail">
-          <p>Reducing Food Waste in the Community</p>
-        </a>
-      </div>
-    </div>
   </section>
 
   <footer>
@@ -106,5 +61,33 @@
   <zapier-interfaces-chatbot-embed is-popup="false" chatbot-id="cm8einjx8003xxmux6xnvc5jk" height="600px" width="400px"></zapier-interfaces-chatbot-embed>
 
   <script src="script.js"></script>
+  <script>
+    // Initialize and add the map
+    function initMap() {
+      // The location of the center point (e.g., New York City)
+      const center = { lat: 40.7128, lng: -74.0060 };
+      // The map, centered at the center point
+      const map = new google.maps.Map(document.getElementById("map"), {
+        zoom: 10,
+        center: center,
+      });
+
+      // Example locations for food rescue (Add actual data or dynamically fetch from a source)
+      const locations = [
+        { lat: 40.730610, lng: -73.935242, title: "Food Bank NYC" },
+        { lat: 40.752776, lng: -73.977968, title: "Community Kitchen" },
+        { lat: 40.705627, lng: -73.978003, title: "Food Rescue Network" },
+      ];
+
+      // Add markers for each location
+      locations.forEach(function(location) {
+        new google.maps.Marker({
+          position: location,
+          map: map,
+          title: location.title,
+        });
+      });
+    }
+  </script>
 </body>
 </html>
