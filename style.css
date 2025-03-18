@@ -127,3 +127,43 @@ footer {
 #food-image-recognition #food-recognition-result {
   margin-top: 20px;
 }
+/* Add these styles to the existing style.css */
+
+.video-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.video {
+  width: 30%;
+  text-align: center;
+}
+
+.video-thumbnail {
+  width: 100%;
+  border-radius: 8px;
+  transition: transform 0.3s;
+}
+
+.video-thumbnail:hover {
+  transform: scale(1.05);
+}
+
+video-container a {
+  color: #FF9900;
+  text-decoration: none;
+}
+
+.video p {
+  color: #FF9900;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 768px) {
+  .video {
+    width: 100%;
+  }
+}
