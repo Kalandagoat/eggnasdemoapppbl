@@ -1,0 +1,52 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #4CAF50;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+section {
+  padding: 20px;
+  margin: 10px;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+  color: #333;
+}
+
+#food-form input, #food-form button {
+  margin-bottom: 10px;
+  padding: 10px;
+  font-size: 16px;
+}
+
+#food-form button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+#food-form button:hover {
+  background-color: #45a049;
+}
+
+#log-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+#log-list li {
+  padding: 5px;
+  border-bottom: 1px solid #ddd;
+}
