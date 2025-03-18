@@ -1,52 +1,110 @@
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f0f0f0;
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #000;
+  color: #fff;
+  line-height: 1.6;
 }
 
 header {
-  background-color: #4CAF50;
-  color: white;
+  background-color: #333;
+  color: #fff;
   text-align: center;
-  padding: 20px;
-}
-
-section {
-  padding: 20px;
-  margin: 10px;
-  background-color: white;
-  border-radius: 5px;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 40px 0;
 }
 
 h1, h2 {
-  color: #333;
+  font-weight: bold;
+  color: #FF9900;
 }
 
-#food-form input, #food-form button {
-  margin-bottom: 10px;
-  padding: 10px;
-  font-size: 16px;
+h2 {
+  margin-top: 20px;
 }
 
-#food-form button {
-  background-color: #4CAF50;
-  color: white;
+section {
+  background-color: #222;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+p {
+  font-size: 18px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+ul li {
+  margin: 10px 0;
+}
+
+a {
+  color: #FF9900;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+button {
+  background-color: #FF9900;
+  color: #fff;
+  padding: 10px 20px;
   border: none;
   cursor: pointer;
+  font-size: 18px;
+  margin-top: 20px;
+  border-radius: 5px;
 }
 
-#food-form button:hover {
-  background-color: #45a049;
+button:hover {
+  background-color: #e68900;
 }
 
-#log-list {
-  list-style-type: none;
-  padding: 0;
+input, select, textarea {
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  width: 100%;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 2px solid #333;
+  background-color: #222;
+  color: #fff;
 }
 
-#log-list li {
-  padding: 5px;
-  border-bottom: 1px solid #ddd;
+input:focus, select:focus, textarea:focus {
+  border-color: #FF9900;
+  outline: none;
+}
+
+footer {
+  text-align: center;
+  background-color: #333;
+  color: #fff;
+  padding: 10px 0;
+  margin-top: 20px;
+}
+
+#food-waste-challenge, #educational-resources, #food-donation-platform {
+  background-color: #111;
+}
+
+#food-waste-challenge button {
+  background-color: #ff5733;
+  color: white;
+}
+
+#food-waste-challenge button:hover {
+  background-color: #e84d2e;
 }
