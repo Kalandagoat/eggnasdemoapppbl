@@ -96,15 +96,34 @@ footer {
   margin-top: 20px;
 }
 
-#food-waste-challenge, #educational-resources, #food-donation-platform {
+#community-sharing, #gamification, #food-image-recognition {
   background-color: #111;
 }
 
-#food-waste-challenge button {
+#gamification #rewards {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #333;
+}
+
+#gamification button {
   background-color: #ff5733;
   color: white;
 }
 
-#food-waste-challenge button:hover {
+#gamification button:hover {
   background-color: #e84d2e;
+}
+
+#food-image-recognition {
+  background-color: #333;
+  padding: 20px;
+}
+
+#food-image-recognition input[type="file"] {
+  margin-bottom: 20px;
+}
+
+#food-image-recognition #food-recognition-result {
+  margin-top: 20px;
 }
