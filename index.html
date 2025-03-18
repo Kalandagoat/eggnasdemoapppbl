@@ -53,6 +53,63 @@
     <p>Join a local bartering network and contribute to sustainable food practices.</p>
   </section>
 
+  <section id="gamification">
+    <h2>Gamification and Rewards</h2>
+    <p>Engage in food waste reduction challenges and earn rewards! Participate in gamified activities to track your food-saving efforts.</p>
+    <button onclick="alert('Join a food waste challenge and track your points!')">Start Challenge</button>
+    <p>Earn rewards and badges for minimizing food waste and sharing your successes with the community.</p>
+  </section>
+
+  <section id="food-image-recognition">
+    <h2>Food Image Recognition</h2>
+    <p>Use food image recognition to identify food items and track waste more efficiently. Upload photos of food waste, and the system will recognize it automatically.</p>
+    <input type="file" id="food-image" accept="image/*" onchange="recognizeFoodImage()">
+    <p id="food-recognition-result"></p>
+  </section>
+
+  <section id="food-donation-platform">
+    <h2>Food Donation Platforms</h2>
+    <p>Learn about and access food donation platforms that help distribute surplus food to those in need. Find local platforms where you can donate food.</p>
+    <ul>
+      <li><a href="https://www.foodrescue.net" target="_blank">Food Rescue US</a> - Connects food donors with nonprofits.</li>
+      <li><a href="https://www.feedingamerica.org" target="_blank">Feeding America</a> - National food bank network.</li>
+      <li><a href="https://www.secondharvest.org" target="_blank">Second Harvest</a> - Fighting hunger through food distribution.</li>
+    </ul>
+  </section>
+
+  <section id="educational-resources">
+    <h2>Educational Resources</h2>
+    <p>Learn more about the causes of food waste, its impact, and ways to prevent it through these resources:</p>
+    <ul>
+      <li><a href="https://www.wfp.org/zero-hunger" target="_blank">Zero Hunger - UN World Food Programme</a></li>
+      <li><a href="https://www.earthday.org/campaign/food-waste/" target="_blank">Earth Day - Food Waste Campaign</a></li>
+      <li><a href="https://www.savethefood.com/" target="_blank">Save the Food - US Government Food Waste Campaign</a></li>
+    </ul>
+  </section>
+
+  <section id="youtube-videos">
+    <h2>Educational Videos on Food Waste</h2>
+    <p>Check out these videos to learn more about the impact of food waste and how we can tackle it together:</p>
+
+    <!-- YouTube Video 1 -->
+    <div class="video-container">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/ifCQ4LqT8G8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <p><a href="https://youtu.be/ifCQ4LqT8G8" target="_blank">Watch the video: The Impact of Food Waste</a></p>
+    </div>
+
+    <!-- YouTube Video 2 -->
+    <div class="video-container">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/ishA6kry8nc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <p><a href="https://youtu.be/ishA6kry8nc" target="_blank">Watch the video: How Food Waste Affects the Environment</a></p>
+    </div>
+
+    <!-- YouTube Video 3 -->
+    <div class="video-container">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/TVP3j7_W7og" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <p><a href="https://youtu.be/TVP3j7_W7og" target="_blank">Watch the video: Solutions to Combat Food Waste</a></p>
+    </div>
+  </section>
+
   <footer>
     <p>&copy; 2025 Tackling Food Waste. All Rights Reserved.</p>
   </footer>
@@ -84,6 +141,15 @@
         .bindPopup(location.title)
         .openPopup();
     });
+
+    // Function for recognizing food image (Placeholder for actual recognition system)
+    function recognizeFoodImage() {
+      var fileInput = document.getElementById("food-image");
+      var file = fileInput.files[0];
+      if (file) {
+        document.getElementById("food-recognition-result").innerText = "Recognizing food item... (This is a placeholder for the image recognition system)";
+      }
+    }
   </script>
 </body>
 </html>
